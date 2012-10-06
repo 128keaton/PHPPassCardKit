@@ -63,49 +63,38 @@
                                     <action selector="hideKB:" destination="2" eventType="touchUpInside" id="m3F-Vn-lpH"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="zJ3-wh-OmC">
+                                <color key="color" red="1" green="0.11590908449034343" blue="0.14100681325755393" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Y0N-UK-dIg" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="113" id="3fE-XN-11U"/>
-                            <constraint firstItem="Zsx-Rq-E1T" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="6lq-XB-WSd"/>
-                            <constraint firstItem="Rfn-wU-HpL" firstAttribute="top" secondItem="3" secondAttribute="top" constant="255" id="8l2-n3-C35"/>
                             <constraint firstItem="Rfn-wU-HpL" firstAttribute="leading" secondItem="Urg-fe-Tts" secondAttribute="leading" type="default" id="9Wy-G1-Ea3"/>
+                            <constraint firstItem="8fq-C9-qPB" firstAttribute="top" secondItem="X0P-je-wMR" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="AE6-aD-kvf"/>
+                            <constraint firstItem="X0P-je-wMR" firstAttribute="top" secondItem="Zsx-Rq-E1T" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="F4X-Rk-x1y"/>
                             <constraint firstItem="Rfn-wU-HpL" firstAttribute="trailing" secondItem="Urg-fe-Tts" secondAttribute="trailing" type="default" id="GcK-ep-poL"/>
-                            <constraint firstItem="Urg-fe-Tts" firstAttribute="top" secondItem="Y0N-UK-dIg" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="HIt-Mc-Uj7"/>
-                            <constraint firstItem="Zsx-Rq-E1T" firstAttribute="top" secondItem="3" secondAttribute="top" constant="152" id="Q4S-i3-W4t"/>
-                            <constraint firstItem="8fq-C9-qPB" firstAttribute="top" secondItem="3" secondAttribute="top" constant="239" id="ccC-AD-aiM"/>
-                            <constraint firstItem="X0P-je-wMR" firstAttribute="top" secondItem="3" secondAttribute="top" constant="193" id="fVw-QS-QUu"/>
-                            <constraint firstItem="8fq-C9-qPB" firstAttribute="centerX" secondItem="X0P-je-wMR" secondAttribute="centerX" type="default" id="hpG-kN-bAf"/>
+                            <constraint firstItem="Zsx-Rq-E1T" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="YY5-Jv-gdX"/>
+                            <constraint firstItem="Rfn-wU-HpL" firstAttribute="top" secondItem="3" secondAttribute="top" constant="105" id="Zeq-0c-Fa0"/>
+                            <constraint firstItem="Y0N-UK-dIg" firstAttribute="centerX" secondItem="Rfn-wU-HpL" secondAttribute="centerX" type="default" id="aBP-UR-hSo"/>
+                            <constraint firstItem="Y0N-UK-dIg" firstAttribute="top" secondItem="3" secondAttribute="top" constant="172" id="b1S-s1-cBh"/>
+                            <constraint firstItem="Urg-fe-Tts" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="hAn-FK-f5J"/>
+                            <constraint firstItem="8fq-C9-qPB" firstAttribute="centerX" secondItem="X0P-je-wMR" secondAttribute="centerX" type="default" id="ihC-fc-3m2"/>
                             <constraint firstItem="8fq-C9-qPB" firstAttribute="centerX" secondItem="Rfn-wU-HpL" secondAttribute="centerX" type="default" id="jDs-h6-Iug"/>
                             <constraint firstAttribute="bottom" secondItem="Urg-fe-Tts" secondAttribute="bottom" constant="38" id="lnJ-jw-KqR"/>
+                            <constraint firstItem="zJ3-wh-OmC" firstAttribute="centerX" secondItem="Y0N-UK-dIg" secondAttribute="centerX" type="default" id="v9m-t5-V17"/>
+                            <constraint firstItem="zJ3-wh-OmC" firstAttribute="centerY" secondItem="3" secondAttribute="centerY" type="default" id="xdK-d0-a37"/>
                             <constraint firstItem="X0P-je-wMR" firstAttribute="centerX" secondItem="Zsx-Rq-E1T" secondAttribute="centerX" type="default" id="xyx-Ab-QDO"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="label" destination="X0P-je-wMR" id="Oam-ic-1sb"/>
+                        <outlet property="spinny" destination="zJ3-wh-OmC" id="gXN-7B-aqd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="generate:"/>
-                <relationship kind="action" name="hideKB:"/>
-                <relationship kind="action" name="pass:"/>
-                <relationship kind="outlet" name="label" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="overlay" candidateClass="UIView"/>
-                <relationship kind="outlet" name="spinny" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

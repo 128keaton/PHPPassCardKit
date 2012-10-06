@@ -22,7 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8A78E1571620DFA000A6331F /* PHPPassCarKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PHPPassCarKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A78E1571620DFA000A6331F /* PHPCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PHPCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A78E15B1620DFA000A6331F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8A78E15D1620DFA000A6331F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8A78E15F1620DFA000A6331F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -68,7 +68,7 @@
 		8A78E1581620DFA000A6331F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8A78E1571620DFA000A6331F /* PHPPassCarKit.app */,
+				8A78E1571620DFA000A6331F /* PHPCard.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,7 +128,7 @@
 			);
 			name = PHPCard;
 			productName = PHPPassCarKit;
-			productReference = 8A78E1571620DFA000A6331F /* PHPPassCarKit.app */;
+			productReference = 8A78E1571620DFA000A6331F /* PHPCard.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
