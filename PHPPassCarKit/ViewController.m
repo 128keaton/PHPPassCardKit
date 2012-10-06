@@ -37,7 +37,7 @@
     // Dispose of any resources that can be recreated.
 }
 -(IBAction)generate:(id)sender{
- 
+ [sender resignFirstResponder];
     [spinny startAnimating];
     NSString *namete = label.text;
     NSString *urlAddress = [NSString stringWithFormat:@"http://pass.keatonburleson.com/gen.php?name=%@", namete];
@@ -60,7 +60,7 @@
     [sender resignFirstResponder];
 }
 -(IBAction)pass:(id)sender{
-
+[sender resignFirstResponder];
     [spinny stopAnimating];
     NSString* passFile = @"http://pass.keatonburleson.com/Pass/pass.pkpass";
     
