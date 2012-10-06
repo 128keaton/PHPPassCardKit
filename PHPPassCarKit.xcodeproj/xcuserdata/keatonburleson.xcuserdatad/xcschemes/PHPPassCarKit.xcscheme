@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8A78E1561620DFA000A6331F"
-               BuildableName = "PHPPassCarKit.app"
+               BuildableName = "PHPCard.app"
                BlueprintName = "PHPCard"
                ReferencedContainer = "container:PHPPassCarKit.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8A78E1561620DFA000A6331F"
-            BuildableName = "PHPPassCarKit.app"
+            BuildableName = "PHPCard.app"
             BlueprintName = "PHPCard"
             ReferencedContainer = "container:PHPPassCarKit.xcodeproj">
          </BuildableReference>
@@ -52,7 +52,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8A78E1561620DFA000A6331F"
-            BuildableName = "PHPPassCarKit.app"
+            BuildableName = "PHPCard.app"
             BlueprintName = "PHPCard"
             ReferencedContainer = "container:PHPPassCarKit.xcodeproj">
          </BuildableReference>
@@ -70,7 +70,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8A78E1561620DFA000A6331F"
-            BuildableName = "PHPPassCarKit.app"
+            BuildableName = "PHPCard.app"
             BlueprintName = "PHPCard"
             ReferencedContainer = "container:PHPPassCarKit.xcodeproj">
          </BuildableReference>
