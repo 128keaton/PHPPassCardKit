@@ -12,6 +12,7 @@
     UITextField *label;
     IBOutlet UIWebView *webView;
     IBOutlet UIActivityIndicatorView *spinny;
+    UITapGestureRecognizer *tapRecognizer;
 
 
 }

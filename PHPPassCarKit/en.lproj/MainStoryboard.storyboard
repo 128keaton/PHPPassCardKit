@@ -12,12 +12,23 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X0P-je-wMR">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WbM-cq-51L">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Wav-DW-hqj"/>
+                                </constraints>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                            </webView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="X0P-je-wMR">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="Hvs-q7-hNu"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert" returnKeyType="go"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="generate:" destination="2" eventType="touchUpInside" id="vDe-K1-bWo"/>
+                                    <outlet property="delegate" destination="2" id="0xa-Kz-e4A"/>
+                                </connections>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Urg-fe-Tts">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -58,9 +69,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="generate:" destination="2" eventType="touchUpInside" id="jya-JX-7D8"/>
-                                    <action selector="hideKB:" destination="2" eventType="touchUpInside" id="m3F-Vn-lpH"/>
-                                    <action selector="hideKB:" destination="2" eventType="touchDown" id="rAm-z2-5fa"/>
+                                    <action selector="generate:" destination="2" eventType="touchUpInside" id="M7u-hS-gQJ"/>
                                 </connections>
                             </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="zJ3-wh-OmC">
@@ -69,14 +78,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Rfn-wU-HpL" firstAttribute="leading" secondItem="Urg-fe-Tts" secondAttribute="leading" type="default" id="9Wy-G1-Ea3"/>
                             <constraint firstItem="8fq-C9-qPB" firstAttribute="top" secondItem="X0P-je-wMR" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="AE6-aD-kvf"/>
+                            <constraint firstItem="WbM-cq-51L" firstAttribute="trailing" secondItem="Urg-fe-Tts" secondAttribute="trailing" type="default" id="Ayn-jU-83I"/>
                             <constraint firstItem="X0P-je-wMR" firstAttribute="top" secondItem="Zsx-Rq-E1T" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="F4X-Rk-x1y"/>
-                            <constraint firstItem="Rfn-wU-HpL" firstAttribute="trailing" secondItem="Urg-fe-Tts" secondAttribute="trailing" type="default" id="GcK-ep-poL"/>
+                            <constraint firstItem="WbM-cq-51L" firstAttribute="top" secondItem="Y0N-UK-dIg" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Lbt-7q-Fak"/>
+                            <constraint firstItem="WbM-cq-51L" firstAttribute="trailing" secondItem="Rfn-wU-HpL" secondAttribute="trailing" type="default" id="SHB-2M-m8F"/>
                             <constraint firstItem="Zsx-Rq-E1T" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="YY5-Jv-gdX"/>
                             <constraint firstItem="Rfn-wU-HpL" firstAttribute="top" secondItem="3" secondAttribute="top" constant="105" id="Zeq-0c-Fa0"/>
                             <constraint firstItem="Y0N-UK-dIg" firstAttribute="centerX" secondItem="Rfn-wU-HpL" secondAttribute="centerX" type="default" id="aBP-UR-hSo"/>
                             <constraint firstItem="Y0N-UK-dIg" firstAttribute="top" secondItem="3" secondAttribute="top" constant="172" id="b1S-s1-cBh"/>
+                            <constraint firstItem="WbM-cq-51L" firstAttribute="leading" secondItem="Rfn-wU-HpL" secondAttribute="leading" type="default" id="d20-r0-h4R"/>
+                            <constraint firstItem="WbM-cq-51L" firstAttribute="leading" secondItem="Urg-fe-Tts" secondAttribute="leading" type="default" id="eMI-6B-Jkg"/>
                             <constraint firstItem="Urg-fe-Tts" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="hAn-FK-f5J"/>
                             <constraint firstItem="8fq-C9-qPB" firstAttribute="centerX" secondItem="X0P-je-wMR" secondAttribute="centerX" type="default" id="ihC-fc-3m2"/>
                             <constraint firstItem="8fq-C9-qPB" firstAttribute="centerX" secondItem="Rfn-wU-HpL" secondAttribute="centerX" type="default" id="jDs-h6-Iug"/>
@@ -89,28 +101,13 @@
                     <connections>
                         <outlet property="label" destination="X0P-je-wMR" id="qMU-qi-fHT"/>
                         <outlet property="spinny" destination="zJ3-wh-OmC" id="gXN-7B-aqd"/>
+                        <outlet property="webView" destination="WbM-cq-51L" id="TiJ-F0-sxc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="generate:"/>
-                <relationship kind="action" name="hideKB:"/>
-                <relationship kind="action" name="pass:"/>
-                <relationship kind="outlet" name="label" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="spinny" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

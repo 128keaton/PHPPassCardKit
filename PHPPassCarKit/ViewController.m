@@ -28,16 +28,40 @@
 {
     [super viewDidLoad];
     
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    
+    [nc addObserver:self selector:@selector(keyboardWillShow:) name:
+     UIKeyboardWillShowNotification object:nil];
+    
+    [nc addObserver:self selector:@selector(keyboardWillHide:) name:
+     UIKeyboardWillHideNotification object:nil];
+    
+    tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                            action:@selector(didTapAnywhere:)];
+
 	// Do any additional setup after loading the view.
 }
 
+
+-(void) keyboardWillShow:(NSNotification *) note {
+    [self.view addGestureRecognizer:tapRecognizer];
+}
+
+-(void) keyboardWillHide:(NSNotification *) note
+{
+    [self.view removeGestureRecognizer:tapRecognizer];
+}
+
+-(void)didTapAnywhere: (UITapGestureRecognizer*) recognizer {
+    [label resignFirstResponder];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 -(IBAction)generate:(id)sender{
- [sender resignFirstResponder];
+ 
     [spinny startAnimating];
     NSString *namete = label.text;
     NSString *urlAddress = [NSString stringWithFormat:@"http://pass.keatonburleson.com/gen.php?name=%@", namete];
@@ -59,8 +83,17 @@
 -(IBAction)hideKB:(id)sender{
     [sender resignFirstResponder];
 }
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    [self generate:self];
+    return YES;
+}
+
+
 -(IBAction)pass:(id)sender{
-[sender resignFirstResponder];
+ 
     [spinny stopAnimating];
     NSString* passFile = @"http://pass.keatonburleson.com/Pass/pass.pkpass";
     
@@ -105,7 +138,6 @@
     
     
 }
-
 #pragma mark - Pass controller delegate
 
 -(void)addPassesViewControllerDidFinish: (PKAddPassesViewController*) controller
