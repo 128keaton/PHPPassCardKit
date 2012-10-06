@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController{
+    UITextField *label;
+    IBOutlet UIWebView *webView;
+    IBOutlet UIActivityIndicatorView *spinny;
+    IBOutlet UIView *overlay;
 
+}
+@property (nonatomic, retain) UIWebView *webView;
+@property IBOutlet UITextField *label;
+-(IBAction)generate:(id)sender;
+@property IBOutlet UIActivityIndicatorView *spinny;
+@property IBOutlet UIView *overlay;
+-(IBAction)hideKB:(id)sender;
 @end

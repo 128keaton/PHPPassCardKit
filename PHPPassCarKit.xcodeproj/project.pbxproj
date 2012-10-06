@@ -18,6 +18,7 @@
 		8A78E1721620DFA000A6331F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A78E1711620DFA000A6331F /* Default-568h@2x.png */; };
 		8A78E1751620DFA000A6331F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A78E1731620DFA000A6331F /* MainStoryboard.storyboard */; };
 		8A78E1781620DFA000A6331F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A78E1771620DFA000A6331F /* ViewController.m */; };
+		8A78E17F1620DFF000A6331F /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A78E17E1620DFF000A6331F /* PassKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		8A78E1741620DFA000A6331F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		8A78E1761620DFA000A6331F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8A78E1771620DFA000A6331F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8A78E17E1620DFF000A6331F /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A78E17F1620DFF000A6331F /* PassKit.framework in Frameworks */,
 				8A78E15C1620DFA000A6331F /* UIKit.framework in Frameworks */,
 				8A78E15E1620DFA000A6331F /* Foundation.framework in Frameworks */,
 				8A78E1601620DFA000A6331F /* CoreGraphics.framework in Frameworks */,
@@ -73,6 +76,7 @@
 		8A78E15A1620DFA000A6331F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8A78E17E1620DFF000A6331F /* PassKit.framework */,
 				8A78E15B1620DFA000A6331F /* UIKit.framework */,
 				8A78E15D1620DFA000A6331F /* Foundation.framework */,
 				8A78E15F1620DFA000A6331F /* CoreGraphics.framework */,
@@ -110,9 +114,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8A78E1561620DFA000A6331F /* PHPPassCarKit */ = {
+		8A78E1561620DFA000A6331F /* PHPCard */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8A78E17B1620DFA000A6331F /* Build configuration list for PBXNativeTarget "PHPPassCarKit" */;
+			buildConfigurationList = 8A78E17B1620DFA000A6331F /* Build configuration list for PBXNativeTarget "PHPCard" */;
 			buildPhases = (
 				8A78E1531620DFA000A6331F /* Sources */,
 				8A78E1541620DFA000A6331F /* Frameworks */,
@@ -122,7 +126,7 @@
 			);
 			dependencies = (
 			);
-			name = PHPPassCarKit;
+			name = PHPCard;
 			productName = PHPPassCarKit;
 			productReference = 8A78E1571620DFA000A6331F /* PHPPassCarKit.app */;
 			productType = "com.apple.product-type.application";
@@ -148,7 +152,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8A78E1561620DFA000A6331F /* PHPPassCarKit */,
+				8A78E1561620DFA000A6331F /* PHPCard */,
 			);
 		};
 /* End PBXProject section */
@@ -284,7 +288,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8A78E17B1620DFA000A6331F /* Build configuration list for PBXNativeTarget "PHPPassCarKit" */ = {
+		8A78E17B1620DFA000A6331F /* Build configuration list for PBXNativeTarget "PHPCard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8A78E17C1620DFA000A6331F /* Debug */,
